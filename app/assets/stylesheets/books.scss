@@ -1,0 +1,118 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #6c6b6b;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.bt{
+	font-size:13px;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.users{
+	color:white;
+}
+.books{
+	color:white;
+}
+.logout{
+	color:white;
+}
+.top-message{
+	color: black;
+}
+span{
+	color: black;
+}
+strong{
+	color: black;
+}
+p{
+	color: black;
+}
+header{
+	background-color: #222;
+	border-color: #090909;
+	margin-bottom:20px;
+	border: 1px solid transparent;
+	display: inline-block;
+	height:50px;
+}
+p{
+	margin:0 0 10px;
+	font-size:13px;
+	line-height:18px;
+}
+body{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #fff;
+}
+.container{
+	margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+h2{
+    font-size: 30px;
+}
+dtn-default{
+	color :#333;
+}
+a{
+	color: #666;
+}
+label{
+	display:block;
+	font-size:13px;
+	line-height:18px;
+}
+.book_title{
+	font-size:10px;
+	line-height:18px;
+}
+.book_body{
+	font-size:10;
+	line-height:18px;
+}
+.nav-left{
+	float: left;
+	font-size:20px;
+	color: white;
+	margin-left:100px;
+}
+.nav-right{
+	float: right;
+	color: white;
+	margin-right:100px;
+}
+label{
+	display: inline-block;
+}
+.book_title{
+	display: block;
+}
+.book_body{
+	display:block;
+}
+.profile-image{
+	width: 100px;
+	height: 100px;
+}

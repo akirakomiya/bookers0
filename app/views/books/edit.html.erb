@@ -1,0 +1,57 @@
+<div class="main-visual clearfix">
+  <% if @book.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= @book.errors.count %>errors prohibited this obj from being saved</h2>
+  </div>
+  <% end %>
+  <% @book.errors.full_messages.each do |message| %>
+  <div class="form-error">
+    <%= message %>
+  </div>
+  <% end %>
+</div>
+ <div class="body">
+  <div class="container">
+    <div class="row">
+      <div class="top-message col-mg-offset-3ncol-md-6">
+       <% if @book.errors.any? %>
+        <div id="error_explanation">
+         <h2><%= @book.errors.count %>errors prohibited this obj from being saved</h2>
+         <% end %>
+       <% @book.errors.full_messages.each do |message| %>
+        <div class="form-error">
+        <%= message %>
+        </div>
+       <% end %>
+      <h2 class="eding"><strong>Editing Book</strong></h2>
+
+        <%= form_for(@book) do |f| %>
+
+         <label class="edi">Title</label>
+         <%= f.text_field :title %>
+
+        <label class="edi btn">Body</label>
+        <%= f.text_area :body %>
+        <div>
+      <%= f.submit 'Update Book' %>
+      </div>
+      <% end %>
+     <div class="sb">
+     <%= link_to "Show",book_path,class: "book_#{@book.id}"%>
+       |
+      <%= link_to 'Back', book_path,class: "back"%>
+     </div>
+   </div>
+  </div>
+ </div>
+</div>
+ <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3 col-xs-offset-9">
+        <p class="copy">CopyRight Infratop.inc</p>
+      </div>
+    </div>
+  </div>
+ </footer>
+</body>

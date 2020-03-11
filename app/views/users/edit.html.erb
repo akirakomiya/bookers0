@@ -1,0 +1,43 @@
+<div class="main-visual clearfix">
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @user.errors.count %>errors prohibited this obj from being saved</h2>
+    </div>
+  <% end %>
+  <% @user.errors.full_messages.each do |message| %>
+  <div class="form-error">
+    <%= message %>
+  </div>
+  <% end %>
+</div>
+<div class="body">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3">
+       <h2>User info</h2>
+        <%= form_for(@user) do |f| %>
+         <h4>Name</h4>
+         <%= f.text_field :name, class: "name" %>
+
+         <h4>Image</h4>
+         <%= f.attachment_field :profile_image, class: "user_image" %>
+         <h4>Introduction</h4>
+         <%= f.text_field :introduction, class: "introduction" %>
+         <%= f.submit 'Updete User' %>
+
+        <% end %>
+    </div>
+  </div>
+ </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3 col-xs-offset-9">
+        <p class="copy">CopyRight Infratop.inc</p>
+      </div>
+    </div>
+  </div>
+ </footer>
+</body>
+
