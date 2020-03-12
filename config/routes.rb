@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :admins
   devise_for :users
   #devise_for :users
   # devise_for :users
-  get '/' => 'users#home',as:"home"
-  get "about" => "users#about",as:"about"
+  # get '/' => 'users#home',as:"root"
+  root 'users#home'
+  get 'home/about' => "users#about"
   resources :users, only: [:show, :edit, :update, :index]
   resources :books, only: [:create, :show, :edit, :destroy, :update, :index]
   # get "users/:id" => "books#index",as:"index"

@@ -14,24 +14,18 @@
   <div class="container">
     <div class="row">
       <div class="top-message col-mg-offset-3ncol-md-6">
-       <% if @book.errors.any? %>
-        <div id="error_explanation">
-         <h2><%= @book.errors.count %>errors prohibited this obj from being saved</h2>
-         <% end %>
-       <% @book.errors.full_messages.each do |message| %>
-        <div class="form-error">
-        <%= message %>
-        </div>
-       <% end %>
       <h2 class="eding"><strong>Editing Book</strong></h2>
 
         <%= form_for(@book) do |f| %>
 
-         <label class="edi">Title</label>
+         <label>Title</label>
+         <br>
          <%= f.text_field :title %>
-
-        <label class="edi btn">Body</label>
+         <br>
+        <label>Body</label>
+        <br>
         <%= f.text_area :body %>
+        <br>
         <div>
       <%= f.submit 'Update Book' %>
       </div>
